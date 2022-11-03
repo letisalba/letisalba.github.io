@@ -58,17 +58,17 @@ function reverser(){
 <script type="text/javascript">
 function multiple(number){
     list = [];
-    var finalvalue = '<table border="1">';
+    var value = '<table border="1">';
     for (i = 1; i <= 20; i++) {list.push(number * i)};
     for (i = 0; i < 20; i++){
         if (i % 4 == 0) { 
-            finalvalue = finalvalue +'<tr>'
+           value = value +'<tr>'
         };
-        finalvalue = finalvalue + '<td>' + list[i] + '</td>';
+        value = value + '<td>' + list[i] + '</td>';
         if (i % 4 == 3){
-            finalvalue = finalvalue + '</tr>'};};
-    finalvalue = finalvalue + '</table>';
-    return finalvalue
+            value = value + '</tr>'};};
+    value = value + '</table>';
+    return value
 };
 
 function display(){
@@ -104,7 +104,7 @@ function display(){
     box or on the webpage.
 </p>
 
-<p>Deployment: Your apps from part 1 and 2 must be deployed. There are a lot of options for deploying javascript apps,
+<p><b>Deployment:</b> Your apps from part 1 and 2 must be deployed. There are a lot of options for deploying javascript apps,
     however I would recommend using github pages. Read more about how github pages work here:https://pages.github.com/ 
 </p>
 
@@ -115,5 +115,8 @@ function display(){
 <p> <a href="https://www.w3schools.com/html/">How to get started</a></p>
 <p> <a href="https://www.geeksforgeeks.org/javascript-program-to-reverse-words-in-a-given-string/">Reverse words</a></p>
 <p> <a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php">Form box</a></p>
+<p> <a href="https://stackoverflow.com/questions/44726687/how-to-multiply-values-in-an-array-of-numbers-in-javascript">Multiply values</a></p>
+<p> <a href="https://stackoverflow.com/questions/44686291/js-how-to-output-values-from-function-into-html-table">Output values</a></p>
+
 </body>
 </html>
