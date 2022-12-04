@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h1>Data 608: Module 5</h1>
+<h2>Leticia Salazar</h2>
+<h2>November 6, 2022</h2>
+
+<br>
+
+<h3> <b>Beginner:</b> </h3>
+<p>
+    This is one of two homework assignments you can complete for this week. Your assignment should be
+    in the form of an HTML page, which I will be able to run locally. Refer to the file 'js_in_webpage.html' on
+    the github page for instructions on setting up javascript to run on an HTML page, and how to run / debug. 
+</p>
+
+
+<p> <b>Question 1:</b> Create a function to reverse any word that you type in. This can be typed into either an input box or an  alert
+    box, and then print in a box or on the webpage.
+</p>
+
+
+<!--function that reverses any word-->
+<script type="text/javascript">
+function reverse_word(str){
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray
+};
+
+function reverser(){
+    var t = document.getElementById("target")
+    t.innerHTML = reverse_word(document.getElementById('str').value);
+}
+</script>
+
+<!--form created with text box-->
+<p>
+    <form name="'reverse_string">
+        <label for="word">Word: </label>
+        <input id="str" type="str" size="18">
+        <input type="button" value="Reverse" onClick="reverser();">
+    </form>
+    </p>
+
+<!--Display-->   
+    <div id="target"></div>
+
+<br>
+
+<p> <b>Question 2:</b> Create a function that takes an input number, and prints a table with the first 20 multiples of the number
+    in order 5x4.
+</p>
+
+<!--Function for table-->
+<script type="text/javascript">
+function multiple(number){
+    list = [];
+    var value = '<table border="1">';
+    for (i = 1; i <= 20; i++) {list.push(number * i)};
+    for (i = 0; i < 20; i++){
+        if (i % 4 == 0) { 
+           value = value +'<tr>'
+        };
+        value = value + '<td>' + list[i] + '</td>';
+        if (i % 4 == 3){
+            value = value + '</tr>'};};
+    value = value + '</table>';
+    return value
+};
+
+function display(){
+    var y = document.getElementById("txtNumber");
+    y.innerHTML = multiple(document.getElementById('number').value);
+}
+
+</script>
+
+<!--form to create table-->
+<form name = "mytable">
+    <input id="number" type="number" size="4">
+    <input type="button" value="Generate Table" onClick="display();">
+
+</form>
+
+<!--Display-->
+<div id="txtNumber"></div>
+
+<br>
+<hr>
+
+
+<h3><b>Intermediate:</b> </h3>
+<p>
+
+    Write a function to load the presidents.csv data and display the data as an html table (you may use a cdv parser
+    from any available library, though I encourage you to try the d3 one).
+</p>
+
+<p> Now that you have the presidents data loaded, write a function that will return the president's height & weight
+    when you type it in. This can be typed into either an input box or an alert box, and then print the result in a 
+    box or on the webpage.
+</p>
+
+<p><b>Deployment:</b> Your apps from part 1 and 2 must be deployed. There are a lot of options for deploying javascript apps,
+    however I would recommend using github pages. Read more about how github pages work here:https://pages.github.com/ 
+</p>
+
+
+<br>
+
+<h3>References: </h3>
+<p> <a href="https://www.w3schools.com/html/">How to get started</a></p>
+<p> <a href="https://www.geeksforgeeks.org/javascript-program-to-reverse-words-in-a-given-string/">Reverse words</a></p>
+<p> <a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php">Form box</a></p>
+<p> <a href="https://stackoverflow.com/questions/44726687/how-to-multiply-values-in-an-array-of-numbers-in-javascript">Multiply values</a></p>
+<p> <a href="https://stackoverflow.com/questions/44686291/js-how-to-output-values-from-function-into-html-table">Output values</a></p>
+
+</body>
+</html>
